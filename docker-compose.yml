@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+
+  api:
+    image: api-springboot
+    build: ./
+    ports:
+    - "8080:8080"
+    networks:
+      - commons-api
+    depends_on:
+      - postgres-compose
+      - s3
+    container_name: api
+    environment:
+      - DB_URL=${DB_URL}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - MINIO_ROOT_USER=${MINIO_ROOT_USER}
+      - MINIO_ROOT_PASSWORD=${MINIO_ROOT_PASSWORD}
+      - MINIO_URL=${MINIO_URL}
+      - MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}
+      - MINIO_SECRET_KEY=${MINIO_SECRET_KEY}
+      - SECRECT_KEY=${SECRECT_KEY}
+
+  postgres-compose:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: "1203"
+      POSTGRES_DB: "syspub"
+    ports:
+      - "5430:5432"
+    networks:
+      - commons-api
+    container_name: postgres-compose
+
+  s3:
+    image: minio/minio:latest
+    ports:
+      - '9000:9000'
+      - '9001:9001'
+    networks:
+      - commons-api
+    volumes:
+      - 'minio_data:/data'
+    environment:
+      - MINIO_ROOT_USER=${MINIO_ROOT_USER}
+      - MINIO_ROOT_PASSWORD=${MINIO_ROOT_PASSWORD}
+      - MINIO_DEFAULT_BUCKETS=${MINIO_DEFAULT_BUCKETS}
+      - MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}
+      - MINIO_SECRET_KEY=${MINIO_SECRET_KEY}
+    command: server /data --console-address ":9001"
+
+networks:
+  commons-api:
+    driver: bridge
+
+volumes:
+  minio_data: {}
