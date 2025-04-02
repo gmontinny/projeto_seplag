@@ -18,13 +18,13 @@ public interface UnidadeEnderecoRepository extends JpaRepository<UnidadeEndereco
 	
 	@Transactional
 	@Modifying
-	@Query("DELETE FROM UnidadeEndereco ue WHERE ue.unidade.idUnidade = :idUnidade AND ue.endereco.id = :idEndereco")
+	@Query("DELETE FROM UnidadeEndereco ue WHERE ue.unidade.id = :idUnidade AND ue.endereco.id = :idEndereco")
 	public void deleteByUnidadeAndEndereco(@Param("idUnidade") Integer idUnidade, @Param("idEndereco") Integer idEndereco);	
 	
 	@Transactional
 	@Modifying
-	@Query("UPDATE UnidadeEndereco ue SET ue.unidade.idUnidade = :idNUnidade, ue.endereco.id = :idNEndereco "
-			+ " WHERE ue.unidade.idUnidade = :idUnidade AND ue.endereco.id = :idEndereco ")
+	@Query("UPDATE UnidadeEndereco ue SET ue.unidade.id = :idNUnidade, ue.endereco.id = :idNEndereco "
+			+ " WHERE ue.unidade.id = :idUnidade AND ue.endereco.id = :idEndereco ")
 	public void updateByUnidadeAndEndereco(@Param("idNUnidade") Integer idNUnidade, @Param("idNEndereco") Integer idNEndereco,
 			@Param("idUnidade") Integer idUnidade, @Param("idEndereco") Integer idEndereco);
 }

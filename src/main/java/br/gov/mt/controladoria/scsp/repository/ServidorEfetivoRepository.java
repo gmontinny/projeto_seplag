@@ -21,17 +21,17 @@ public interface ServidorEfetivoRepository extends JpaRepository<ServidorEfetivo
 			+ " FROM ServidorEfetivo se, Pessoa p, Unidade u, Lotacao l, FotoPessoa f "
 			+ " WHERE p.id = se.pessoa.id "
 			+ " AND l.pessoa.id = p.id "
-			+ " AND u.idUnidade = l.unidade.idUnidade "
+			+ " AND u.id = l.unidade.id "
 			+ " AND f.pessoa.id = p.id "
-			+ " AND u.idUnidade = :codigo ")
+			+ " AND u.id = :codigo ")
 	public Page<Object[]> findByServidorEfetivoAndLotacao( @Param("codigo") Integer codigo, Pageable pageable);
 	
 	@Query(" SELECT u.nomeUnidade, e.bairroEndereco, e.tipoLogradouroEndereco, e.logradouroEndereco  "
 			+ " FROM ServidorEfetivo se, Pessoa p, Unidade u, Lotacao l, UnidadeEndereco ue, Endereco e "
 			+ " WHERE p.id = se.pessoa.id "
 			+ " AND l.pessoa.id = p.id "
-			+ " AND u.idUnidade = l.unidade.idUnidade "
-			+ " AND u.idUnidade = ue.unidade.idUnidade "
+			+ " AND u.id = l.unidade.id "
+			+ " AND u.id = ue.unidade.id "
 			+ " AND ue.endereco.id = e.id "
 			+ " AND lower(p.nomePessoa) LIKE lower(concat('%',:nome,'%'))")
 	public Page<Object[]> findByServidorEfetivoAndEnderecoEndUnidadeIgnoreCase( @Param("nome") String nome, Pageable pageable);

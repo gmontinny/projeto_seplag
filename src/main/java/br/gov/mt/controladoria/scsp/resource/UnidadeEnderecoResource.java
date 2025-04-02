@@ -37,7 +37,7 @@ public class UnidadeEnderecoResource {
 	@PutMapping("/unidade/{unidadeId}/endereco/{enderecoId}")
 	@ResponseStatus(HttpStatus.ACCEPTED)
 	public void atualizar(@PathVariable Integer unidadeId, @PathVariable Integer enderecoId, @RequestBody UnidadeEndereco unidadeEndereco) {
-		this.unidadeEnderecoRepository.updateByUnidadeAndEndereco(unidadeEndereco.getUnidade().getIdUnidade(), unidadeEndereco.getEndereco().getId(),
+		this.unidadeEnderecoRepository.updateByUnidadeAndEndereco(unidadeEndereco.getUnidade().getId(), unidadeEndereco.getEndereco().getId(),
 				unidadeId, enderecoId);
 	}
 }
