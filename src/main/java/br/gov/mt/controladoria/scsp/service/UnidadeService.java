@@ -47,7 +47,7 @@ public class UnidadeService {
 	@Transactional(rollbackFor = Exception.class)
 	public Unidade atualizar(Integer codigo, Unidade unidade) {
 		Unidade unidadeSalvar = buscaUnidadePeloCodigo(codigo);
-		BeanUtils.copyProperties(unidade,unidadeSalvar,"idUnidade");
+		BeanUtils.copyProperties(unidade,unidadeSalvar,"id");
 		return unidadeSalvar;
 	}
 
