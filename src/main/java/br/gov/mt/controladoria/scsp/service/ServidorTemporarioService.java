@@ -44,11 +44,12 @@ public class ServidorTemporarioService {
 		return servidorTemporarioRepository.save(servidorTemporario);
 	}
 
-
+	@Transactional(rollbackFor = Exception.class)
 	public ServidorTemporario atualizar(Integer codigo, ServidorTemporario servidorTemporario) {		
 		return servidorTemporarioRepository.save(servidorTemporario);
 	}
 
+	@Transactional(rollbackFor = Exception.class)
 	public void deletar(ServidorTemporarioId id) {
 		ServidorTemporario servidorTemporario = servidorTemporarioRepository.findById(id)
 				.orElseThrow(() -> new RuntimeException("Servidor Temporário não encontrado."));
