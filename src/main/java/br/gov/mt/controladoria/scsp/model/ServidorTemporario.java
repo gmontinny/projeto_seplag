@@ -13,8 +13,8 @@ public class ServidorTemporario {
 	
 	@EmbeddedId
 	private ServidorTemporarioId Id;
-	
-	@NotNull
+
+	@NotNull(message = "{pessoa.nulo}") // Mensagem customizada
 	@ManyToOne
 	@JoinColumn(name = "pes_id")
 	private Pessoa pessoa;

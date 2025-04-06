@@ -18,8 +18,8 @@ public class ServidorEfetivoId implements Serializable{
 	 */
 	private static final long serialVersionUID = 1L;
 
-	
-	@NotNull
+
+	@NotNull(message = "{servidorTemporario.dataAdmissao.notnull}")
 	@Column(name = "se_matricula")
 	private String seMatriculaServidorEfetivo;
 

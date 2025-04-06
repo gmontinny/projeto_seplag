@@ -20,13 +20,13 @@ public class ServidorTemporarioId implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
-	@NotNull
+
+	@NotNull(message = "{servidorTemporario.dataAdmissao.notnull}") // Mensagem customizada
 	@Temporal(TemporalType.DATE)
 	@Column(name = "st_data_admissao")
 	private Date dataAdmissao;
-	
-	@NotNull
+
+	@NotNull(message = "{servidorTemporario.dataDemissao.notnull}") // Mensagem customizada
 	@Temporal(TemporalType.DATE)
 	@Column(name = "st_data_demissao")
 	private Date dataDemissao;

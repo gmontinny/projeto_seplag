@@ -15,7 +15,7 @@ public class ServidorEfetivo {
 	@EmbeddedId
 	private ServidorEfetivoId id;
 
-	@NotNull
+	@NotNull(message = "{servidorTemporario.pessoa.notnull}")
 	@ManyToOne
 	@JoinColumn(name = "pes_id")
 	private Pessoa pessoa;
