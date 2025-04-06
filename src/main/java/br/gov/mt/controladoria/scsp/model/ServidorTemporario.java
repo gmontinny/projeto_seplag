@@ -12,7 +12,7 @@ import lombok.Setter;
 public class ServidorTemporario {
 	
 	@EmbeddedId
-	private ServidorTemporarioId Id;
+	private ServidorTemporarioId id;
 
 	@NotNull(message = "{pessoa.nulo}") // Mensagem customizada
 	@ManyToOne

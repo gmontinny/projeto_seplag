@@ -47,7 +47,7 @@ public class CidadeResource {
 		return ResponseEntity.status(HttpStatus.CREATED).body(responseDTO);
 	}
 
-	@Operation(description = "API para todas listar as cidades")
+	@Operation(description = "API para listar todas as cidades")
 	@ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Retorno OK da Lista"),
 			@ApiResponse(responseCode = "401", description = "Erro de autenticação dessa API"),
 			@ApiResponse(responseCode = "403", description = "Erro de autorização dessa API"),
