@@ -1,6 +1,6 @@
 package br.gov.mt.controladoria.scsp.model.dto.fotoPessoa;
 
-import br.gov.mt.controladoria.scsp.model.Pessoa;
+import br.gov.mt.controladoria.scsp.model.dto.pessoa.PessoaRequestDTO;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 import jakarta.validation.constraints.NotNull;
@@ -19,7 +19,7 @@ public class FotoPessoaRequestDTO {
     private Integer id;
 
     @NotNull(message = "{fotoPessoa.pessoa.notnull}")
-    private Pessoa pessoa;
+    private PessoaRequestDTO pessoa;
 
     @NotNull(message = "{fotoPessoa.dataFotoPessoa.notnull}")
     @PastOrPresent(message = "{fotoPessoa.dataFotoPessoa.pastOrPresent}")

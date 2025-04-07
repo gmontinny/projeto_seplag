@@ -2,6 +2,7 @@ package br.gov.mt.controladoria.scsp.repository;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
@@ -14,6 +15,7 @@ import br.gov.mt.controladoria.scsp.model.UnidadeEnderecoId;
 
 @Repository
 public interface UnidadeEnderecoRepository extends JpaRepository<UnidadeEndereco, UnidadeEnderecoId>{
+	@EntityGraph(attributePaths = {"unidade", "endereco"})
 	public Page<UnidadeEndereco> findAll(Pageable pageable);
 	
 	@Transactional

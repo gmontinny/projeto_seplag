@@ -14,14 +14,14 @@ public class UnidadeEndereco {
 	
 	@EmbeddedId
 	private UnidadeEnderecoId id;
-	
-	@NotNull
+
+	@NotNull(message = "{unidadeEndereco.unidade.notnull}")
 	@ManyToOne
 	@MapsId("unidadeId")
 	@JoinColumn(name = "unid_id")
 	private Unidade unidade;
-	
-	@NotNull
+
+	@NotNull(message = "{unidadeEndereco.endereco.notnull}")
 	@ManyToOne
 	@MapsId("enderecoId")
 	@JoinColumn(name = "end_id")

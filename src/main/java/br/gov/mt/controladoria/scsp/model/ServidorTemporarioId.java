@@ -6,12 +6,14 @@ import jakarta.persistence.Embeddable;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 import jakarta.validation.constraints.NotNull;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
 import java.util.Date;
 
+@EqualsAndHashCode(of = {"dataAdmissao", "dataDemissao"})
 @Getter
 @Setter
 @Embeddable
