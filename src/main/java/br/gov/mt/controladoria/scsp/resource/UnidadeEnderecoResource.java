@@ -63,7 +63,7 @@ public class UnidadeEnderecoResource {
 		return ResponseEntity.status(HttpStatus.CREATED).body(responseDTO);
 	}
 
-	@Operation(description = "API para remover cidade")
+	@Operation(description = "API para remover Unidade Endereço")
 	@ApiResponses(value = {@ApiResponse(responseCode = "204", description = "Retorno OK da remoçao"),
 			@ApiResponse(responseCode = "401", description = "Erro de autenticação dessa API"),
 			@ApiResponse(responseCode = "403", description = "Erro de autorização dessa API"),
@@ -75,7 +75,7 @@ public class UnidadeEnderecoResource {
 		unidadeEnderecoService.remover(unidadeId, enderecoId);
 	}
 
-	@Operation(description = "API para atualizar Cidades")
+	@Operation(description = "API para atualizar Unidade Endereço")
 	@ApiResponses(value = {@ApiResponse(responseCode = "200", description = "Retorno OK para atualização"),
 			@ApiResponse(responseCode = "401", description = "Erro de autenticação dessa API"),
 			@ApiResponse(responseCode = "403", description = "Erro de autorização dessa API"),

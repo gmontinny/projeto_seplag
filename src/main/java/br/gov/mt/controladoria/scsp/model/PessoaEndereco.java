@@ -12,15 +12,16 @@ import lombok.Setter;
 public class PessoaEndereco {
 	
 	@EmbeddedId
+	@NotNull(message = "{pessoaEndereco.id.nulo}")
 	PessoaEnderecoId id;
-		
-	@NotNull
+
+	@NotNull(message = "{pessoaEndereco.pessoa.notnull}")
 	@ManyToOne
 	@MapsId("pessoaId")
 	@JoinColumn(name = "pes_id")
 	private Pessoa pessoa;
-	
-	@NotNull
+
+	@NotNull(message = "{pessoaEndereco.endereco.notnull}")
 	@ManyToOne
 	@MapsId("enderecoId")
 	@JoinColumn(name = "end_id")
