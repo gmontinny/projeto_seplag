@@ -48,7 +48,7 @@ public class LotacaoService {
 	@Transactional(rollbackFor = Exception.class)
 	public Lotacao atualizar(Integer codigo, Lotacao lotacao) {
 		Lotacao lotacaoSalvar = buscaLotacaoPeloCodigo(codigo);
-		BeanUtils.copyProperties(lotacao,lotacaoSalvar,"idLotacao");
+		BeanUtils.copyProperties(lotacao,lotacaoSalvar,"id");
 		return lotacaoRepository.save(lotacaoSalvar);
 	}
 
