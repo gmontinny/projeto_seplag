@@ -16,29 +16,29 @@ public class Lotacao {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "lotacao_generator")
 	@SequenceGenerator(name = "lotacao_generator", sequenceName = "lotacao_sequence", allocationSize = 1)
 	@Column(name = "lot_id")
-	private Integer idLotacao;
+	private Integer id;
 	
-	@NotNull
+	@NotNull(message = "{lotacao.pessoa.notnull}")
 	@ManyToOne
 	@JoinColumn(name = "pes_id")
 	private Pessoa pessoa;
 	
-	@NotNull
+	@NotNull(message = "{lotacao.unidade.notnull}")
 	@ManyToOne
 	@JoinColumn(name = "unid_id")
 	private Unidade unidade;
 	
-	@NotNull
+	@NotNull(message = "{lotacao.dataLotacao.notnull}")
 	@Temporal(TemporalType.DATE)
 	@Column(name = "lot_data_lotacao")
 	private Date dataLotacao;
 	
-	@NotNull	
+	@NotNull(message = "{lotacao.dataRemocao.notnull}")
 	@Temporal(TemporalType.DATE)
 	@Column(name = "lot_data_remocao")
 	private Date dataRemocao;
 	
-	@NotNull
+	@NotNull(message = "{lotacao.portariaLotacao.notnull}")
 	@Column(name = "lot_portaria")
 	private String portariaLotacao;
 
