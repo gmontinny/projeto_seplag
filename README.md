@@ -52,7 +52,7 @@ Sistema de Controle Servidor Público
 | `password` | `string` | **Obrigatório**. |
 
 
-[![Alt-Text](/imagens/img_token.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_token.jpg)
+[![Alt-Text](/imagens/img_token.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_token.jpg)
 
 
 #### Configuração para usar o TOKEN de Refresh
@@ -67,7 +67,7 @@ Sistema de Controle Servidor Público
 
 
 
-[![Alt-Text](/imagens/img_token.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_refresh_token.jpg)
+[![Alt-Text](/imagens/img_token.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_refresh_token.jpg)
 
 
 
@@ -77,7 +77,7 @@ Sistema de Controle Servidor Público
   GET /cidades
 ```
 
-[![Alt-Text](/imagens/img_cidade_get.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_cidade_get.jpg)
+[![Alt-Text](/imagens/img_cidade_get.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_cidade_get.jpg)
 
 #### API Cidades - Paginação
 
@@ -85,7 +85,7 @@ Sistema de Controle Servidor Público
   GET /cidades?page=0&size=3
 ```
 
-[![Alt-Text](/imagens/img_cidade_paginate.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_cidade_paginate.jpg)
+[![Alt-Text](/imagens/img_cidade_paginate.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_cidade_paginate.jpg)
 
 
 #### API Cidades - Gravar
@@ -99,7 +99,7 @@ Sistema de Controle Servidor Público
 | `nomeCidade`       | `string` | **Obrigatório**. |
 | `ufCidade`       | `string` | **Obrigatório**. |
 
-[![Alt-Text](/imagens/img_cidade_post.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_cidade_post.jpg)
+[![Alt-Text](/imagens/img_cidade_post.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_cidade_post.jpg)
 
 
 #### API Cidades - Atualizar
@@ -113,7 +113,7 @@ Sistema de Controle Servidor Público
 | `codigo`       | `int` | **Obrigatório**. |
 
 
-[![Alt-Text](/imagens/img_cidade_put.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_cidade_put.jpg)	
+[![Alt-Text](/imagens/img_cidade_put.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_cidade_put.jpg)	
 	
 
 #### API Cidades - Deletar
@@ -127,7 +127,7 @@ Sistema de Controle Servidor Público
 | `codigo`       | `int` | **Obrigatório**. |
 
 
-[![Alt-Text](/imagens/img_cidade_delete.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_cidade_delete.jpg)	
+[![Alt-Text](/imagens/img_cidade_delete.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_cidade_delete.jpg)	
 
 #### API Endereço - Listar Todas
 
@@ -135,7 +135,7 @@ Sistema de Controle Servidor Público
   GET /enderecos
 ```
 
-[![Alt-Text](/imagens/img_endereco_get.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_endereco_get.jpg)
+[![Alt-Text](/imagens/img_endereco_get.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_endereco_get.jpg)
 
 #### API Endereço - Paginação
 
@@ -157,7 +157,7 @@ Sistema de Controle Servidor Público
 | `bairroEndereco`       | `string` | **Obrigatório**. |
 | `cidade`       | `Cidade` | **Obrigatório**. |
 
-[![Alt-Text](/imagens/img_endereco_post.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_endereco_post.jpg)
+[![Alt-Text](/imagens/img_endereco_post.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_endereco_post.jpg)
 
 
 #### API Endereços - Atualizar
@@ -171,7 +171,7 @@ Sistema de Controle Servidor Público
 | `codigo`       | `int` | **Obrigatório**. |
 
 
-[![Alt-Text](/imagens/img_endereco_put.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_endereco_put.jpg)	
+[![Alt-Text](/imagens/img_endereco_put.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_endereco_put.jpg)	
 	
 
 #### API Endereços - Deletar
@@ -185,7 +185,7 @@ Sistema de Controle Servidor Público
 | `codigo`       | `int` | **Obrigatório**. |
 
 
-[![Alt-Text](/imagens/img_endereco_delete.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_endereco_delete.jpg)	
+[![Alt-Text](/imagens/img_endereco_delete.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_endereco_delete.jpg)	
 
 
 #### API File - Upload de Arquivo
@@ -205,7 +205,7 @@ Sistema de Controle Servidor Público
 | `title`       | `string` | **Obrigatório**. |
 | `description`       | `string` | **Obrigatório**. |
 
-[![Alt-Text](/imagens/img_file_post.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_file_post.jpg)
+[![Alt-Text](/imagens/img_file_post.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_file_post.jpg)
 
 
 #### API File - Exibir Aquivo
@@ -218,7 +218,7 @@ Sistema de Controle Servidor Público
 
 > Vai ser exibido o formato stream do arquivo
 
-[![Alt-Text](/imagens/img_file_get.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_file_get.jpg)
+[![Alt-Text](/imagens/img_file_get.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_file_get.jpg)
 
 
 #### API FotoPessoa - Listar Todas
@@ -227,7 +227,7 @@ Sistema de Controle Servidor Público
   GET /fotoPessoas
 ```
 
-[![Alt-Text](/imagens/img_fotopessoa_get.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_fotopessoa_get.jpg)
+[![Alt-Text](/imagens/img_fotopessoa_get.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_fotopessoa_get.jpg)
 
 #### API FotoPessoa - Paginação
 
@@ -249,7 +249,7 @@ Sistema de Controle Servidor Público
 | `hashFotoPessoa`       | `string` | **Obrigatório**. |
 
 
-[![Alt-Text](/imagens/img_fotopessoa_post.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_fotopessoa_post.jpg)
+[![Alt-Text](/imagens/img_fotopessoa_post.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_fotopessoa_post.jpg)
 
 
 #### API FotoPessoa - Atualizar
@@ -263,7 +263,7 @@ Sistema de Controle Servidor Público
 | `codigo`       | `int` | **Obrigatório**. |
 
 
-[![Alt-Text](/imagens/img_fotopessoa_put.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_fotopessoa_put.jpg)
+[![Alt-Text](/imagens/img_fotopessoa_put.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_fotopessoa_put.jpg)
 	
 
 #### API FotoPessoa - Deletar
@@ -277,7 +277,7 @@ Sistema de Controle Servidor Público
 | `codigo`       | `int` | **Obrigatório**. |
 
 
-[![Alt-Text](/imagens/img_fotopessoa_delete.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_fotopessoa_delete.jpg)	
+[![Alt-Text](/imagens/img_fotopessoa_delete.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_fotopessoa_delete.jpg)	
 
  
  #### API Lotação - Listar Todas
@@ -286,7 +286,7 @@ Sistema de Controle Servidor Público
   GET /lotacoes
 ```
 
-[![Alt-Text](/imagens/img_lotacao_get.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_lotacao_get.jpg)
+[![Alt-Text](/imagens/img_lotacao_get.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_lotacao_get.jpg)
 
 #### API Lotação - Paginação
 
@@ -310,7 +310,7 @@ Sistema de Controle Servidor Público
 | `portariaLotacao`  | `string` | **Obrigatório**. |
 
 
-[![Alt-Text](/imagens/img_lotacao_post.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_lotacao_post.jpg)
+[![Alt-Text](/imagens/img_lotacao_post.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_lotacao_post.jpg)
 
 
 #### API Lotação - Atualizar
@@ -324,7 +324,7 @@ Sistema de Controle Servidor Público
 | `codigo`       | `int` | **Obrigatório**. |
 
 
-[![Alt-Text](/imagens/img_lotacao_put.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_lotacao_put.jpg)
+[![Alt-Text](/imagens/img_lotacao_put.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_lotacao_put.jpg)
 	
 
 #### API Lotação - Deletar
@@ -338,7 +338,7 @@ Sistema de Controle Servidor Público
 | `codigo`       | `int` | **Obrigatório**. |
 
 
-[![Alt-Text](/imagens/img_lotacao_delete.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_lotacao_delete.jpg)
+[![Alt-Text](/imagens/img_lotacao_delete.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_lotacao_delete.jpg)
 
 
  #### API Pessoa Endereço - Listar Todas
@@ -347,7 +347,7 @@ Sistema de Controle Servidor Público
   GET /pessoaEnderecos
 ```
 
-[![Alt-Text](/imagens/img_pessoaendereco_get.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_pessoaendereco_get.jpg)
+[![Alt-Text](/imagens/img_pessoaendereco_get.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_pessoaendereco_get.jpg)
 
 #### API Pessoa Endereço - Paginação
 
@@ -368,7 +368,7 @@ Sistema de Controle Servidor Público
 | `endereco`    | `Endereco` | **Obrigatório**. |
 
 
-[![Alt-Text](/imagens/img_pessoaendereco_post.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_pessoaendereco_post.jpg)
+[![Alt-Text](/imagens/img_pessoaendereco_post.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_pessoaendereco_post.jpg)
 
 
 #### API Pessoa Endereço - Atualizar
@@ -383,7 +383,7 @@ Sistema de Controle Servidor Público
 | `idendereco`       | `int` | **Obrigatório**. |
 
 
-[![Alt-Text](/imagens/img_pessoaendereco_put.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_pessoaendereco_put.jpg)	
+[![Alt-Text](/imagens/img_pessoaendereco_put.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_pessoaendereco_put.jpg)	
 	
 
 #### API Pessoa Endereço - Deletar
@@ -398,7 +398,7 @@ Sistema de Controle Servidor Público
 | `idendereco`       | `int` | **Obrigatório**. |
 
 
-[![Alt-Text](/imagens/img_pessoaendereco_delete.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_pessoaendereco_delete.jpg)		
+[![Alt-Text](/imagens/img_pessoaendereco_delete.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_pessoaendereco_delete.jpg)		
 
 
  #### API Pessoas - Listar Todas
@@ -407,7 +407,7 @@ Sistema de Controle Servidor Público
   GET /pessoas
 ```
 
-[![Alt-Text](/imagens/img_pessoa_get.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_pessoa_get.jpg)	
+[![Alt-Text](/imagens/img_pessoa_get.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_pessoa_get.jpg)	
 
 #### API Pessoas - Paginação
 
@@ -431,7 +431,7 @@ Sistema de Controle Servidor Público
 | `paiPessoa`    | `string` | **Obrigatório**. |
 
 
-[![Alt-Text](/imagens/img_pessoa_post.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_pessoa_post.jpg)	
+[![Alt-Text](/imagens/img_pessoa_post.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_pessoa_post.jpg)	
 
 
 #### API Pessoas - Atualizar
@@ -446,7 +446,7 @@ Sistema de Controle Servidor Público
 
 
 
-[![Alt-Text](/imagens/img_pessoa_put.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_pessoa_put.jpg)	
+[![Alt-Text](/imagens/img_pessoa_put.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_pessoa_put.jpg)	
 	
 
 #### API Pessoas - Deletar
@@ -460,7 +460,7 @@ Sistema de Controle Servidor Público
 | `codigo`       | `int` | **Obrigatório**. |
 
 
-[![Alt-Text](/imagens/img_pessoa_delete.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_pessoa_delete.jpg)	
+[![Alt-Text](/imagens/img_pessoa_delete.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_pessoa_delete.jpg)	
 
 
  #### API Servidor Efetivo - Listar Todos
@@ -469,7 +469,7 @@ Sistema de Controle Servidor Público
   GET /servidorEfetivo
 ```
 
-[![Alt-Text](/imagens/img_servidorefetivo_get.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_servidorefetivo_get.jpg)	
+[![Alt-Text](/imagens/img_servidorefetivo_get.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_servidorefetivo_get.jpg)	
 
 #### API Servidor Efetivo - Mostra a pessoa lotada na unidade pelo codigo
 
@@ -481,7 +481,7 @@ Sistema de Controle Servidor Público
 | :---------- | :--------- | :------------------------------------------ |
 | `idUnidade`       | `int` | **Obrigatório**. |
 
-[![Alt-Text](/imagens/img_servidorefetivo_unidade.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_servidorefetivo_unidade.jpg)	
+[![Alt-Text](/imagens/img_servidorefetivo_unidade.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_servidorefetivo_unidade.jpg)	
 
 
 #### API Servidor Efetivo - Mostra o endereço pelo nome da pessoa
@@ -494,7 +494,7 @@ Sistema de Controle Servidor Público
 | :---------- | :--------- | :------------------------------------------ |
 | `nome`       | `string` | **Obrigatório**. |
 
-[![Alt-Text](/imagens/img_servidorefetivo_endereco.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_servidorefetivo_endereco.jpg)	
+[![Alt-Text](/imagens/img_servidorefetivo_endereco.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_servidorefetivo_endereco.jpg)	
 
 
 #### API Servidor Efetivo - Gravar
@@ -509,7 +509,7 @@ Sistema de Controle Servidor Público
 | `pessoa`    | `Pessoa` | **Obrigatório**. |
 
 
-[![Alt-Text](/imagens/img_servidorefetivo_post.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_servidorefetivo_post.jpg)	
+[![Alt-Text](/imagens/img_servidorefetivo_post.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_servidorefetivo_post.jpg)	
 
 
 #### API Servidor Efetivo - Atualizar
@@ -524,7 +524,7 @@ Sistema de Controle Servidor Público
 
 
 
-[![Alt-Text](/imagens/img_servidorefetivo_put.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_servidorefetivo_put.jpg)		
+[![Alt-Text](/imagens/img_servidorefetivo_put.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_servidorefetivo_put.jpg)		
 	
 
 #### API Servidor Efetivo - Deletar
@@ -538,7 +538,7 @@ Sistema de Controle Servidor Público
 | `matricula`  | `string` | **Obrigatório**. |
 
 
-[![Alt-Text](/imagens/img_servidorefetivo_delete.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_servidorefetivo_delete.jpg)	
+[![Alt-Text](/imagens/img_servidorefetivo_delete.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_servidorefetivo_delete.jpg)	
 	
  #### API Servidor Temporario - Listar Todas
 
@@ -546,7 +546,7 @@ Sistema de Controle Servidor Público
   GET /servidorTemporario
 ```
 
-[![Alt-Text](/imagens/img_servidortemporario_get.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_servidortemporario_get.jpg)	
+[![Alt-Text](/imagens/img_servidortemporario_get.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_servidortemporario_get.jpg)	
 
 #### API Servidor Temporario - Paginação
 
@@ -566,7 +566,7 @@ Sistema de Controle Servidor Público
 | `dataAdmissao`    | `date` | **Obrigatório**. |
 | `dataDemissao`    | `date` | **Obrigatório**. |
 
-[![Alt-Text](/imagens/img_servidortemporario_post.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_servidortemporario_post.jpg)	
+[![Alt-Text](/imagens/img_servidortemporario_post.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_servidortemporario_post.jpg)	
 
 
 #### API Servidor Temporario - Atualizar
@@ -581,7 +581,7 @@ Sistema de Controle Servidor Público
 
 
 
-[![Alt-Text](/imagens/img_servidortemporario_put.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_servidortemporario_put.jpg)		
+[![Alt-Text](/imagens/img_servidortemporario_put.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_servidortemporario_put.jpg)		
 	
 
 #### API Servidor Temporario - Deletar
@@ -595,7 +595,7 @@ Sistema de Controle Servidor Público
 | `codigo`       | `int` | **Obrigatório**. |
 
 
-[![Alt-Text](/imagens/img_servidortemporario_delete.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_servidortemporario_delete.jpg)	
+[![Alt-Text](/imagens/img_servidortemporario_delete.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_servidortemporario_delete.jpg)	
 
 
  #### API Unidade Endereço - Listar Todas
@@ -604,7 +604,7 @@ Sistema de Controle Servidor Público
   GET /unidadeEnderecos
 ```
 
-[![Alt-Text](/imagens/img_unidadeendereco_get.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_unidadeendereco_get.jpg)	
+[![Alt-Text](/imagens/img_unidadeendereco_get.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_unidadeendereco_get.jpg)	
 
 #### API Unidade Endereço - Paginação
 
@@ -625,7 +625,7 @@ Sistema de Controle Servidor Público
 | `unidade`       | `Unidade` | **Obrigatório**. |
 | `endereco`    | `Endereco` | **Obrigatório**. |
 
-[![Alt-Text](/imagens/img_unidadeendereco_post.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_unidadeendereco_post.jpg)
+[![Alt-Text](/imagens/img_unidadeendereco_post.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_unidadeendereco_post.jpg)
 
 
 #### API Unidade Endereço - Atualizar
@@ -641,7 +641,7 @@ Sistema de Controle Servidor Público
 
 
 
-[![Alt-Text](/imagens/img_unidadeendereco_put.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_unidadeendereco_put.jpg)
+[![Alt-Text](/imagens/img_unidadeendereco_put.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_unidadeendereco_put.jpg)
 	
 
 #### API Unidade Endereço - Deletar
@@ -656,7 +656,7 @@ Sistema de Controle Servidor Público
 | `idEndereco`       | `int` | **Obrigatório**. |
 
 
-[![Alt-Text](/imagens/img_unidadeendereco_delete.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_unidadeendereco_delete.jpg)
+[![Alt-Text](/imagens/img_unidadeendereco_delete.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_unidadeendereco_delete.jpg)
 
  #### API Unidade - Listar Todas
 
@@ -664,7 +664,7 @@ Sistema de Controle Servidor Público
   GET /unidades
 ```
 
-[![Alt-Text](/imagens/img_unidade_get.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_unidade_get.jpg)
+[![Alt-Text](/imagens/img_unidade_get.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_unidade_get.jpg)
 
 #### API Unidade - Paginação
 
@@ -684,7 +684,7 @@ Sistema de Controle Servidor Público
 | `nomeUnidade`       | `String` | **Obrigatório**. |
 | `siglaUnidade`    | `String` | **Obrigatório**. |
 
-[![Alt-Text](/imagens/img_unidade_post.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_unidade_post.jpg)
+[![Alt-Text](/imagens/img_unidade_post.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_unidade_post.jpg)
 
 
 #### API Unidade - Atualizar
@@ -698,7 +698,7 @@ Sistema de Controle Servidor Público
 | `codigo`       | `int` | **Obrigatório**. |
 
 
-[![Alt-Text](/imagens/img_unidade_put.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_unidade_put.jpg)
+[![Alt-Text](/imagens/img_unidade_put.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_unidade_put.jpg)
 
 
 
@@ -714,5 +714,5 @@ Sistema de Controle Servidor Público
 | `codigo`       | `int` | **Obrigatório**. |
 
 
-[![Alt-Text](/imagens/img_unidade_put.jpg)](https://git2.pjc.mt.gov.br/gmontinny/sistema-de-controle-de-servidores-publico/-/blob/master/imagens/img_unidade_delete.jpg)
+[![Alt-Text](/imagens/img_unidade_put.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_unidade_delete.jpg)
 

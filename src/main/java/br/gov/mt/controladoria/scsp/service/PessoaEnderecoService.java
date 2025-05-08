@@ -68,7 +68,7 @@ public class PessoaEnderecoService {
         // Busca o PessoaEndereco atualizado para retornar
         return pessoaEnderecoRepository.findByPessoaAndEndereco(idNPessoa, idNEndereco)
                 .orElseThrow(() -> new IllegalArgumentException(
-                        messageSource.getMessage("pessoaEndereco.naoencontrado", null, Locale.getDefault())));
+                        messageSource.getMessage("pessoaEndereco.naoEncontrado", null, Locale.getDefault())));
     }
 
 }
