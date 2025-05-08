@@ -171,7 +171,7 @@ Sistema de Controle Servidor Público
 | `codigo`       | `int` | **Obrigatório**. |
 
 
-[![Alt-Text](/imagens/img_endereco_put.jpg)](https://github.com/gmontinny/projeto_seplag/blob/main/imagens/img_endereco_put.jpg)	
+[![Alt-Text](/imagens/img_endereco_put.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_endereco_put.jpg)	
 	
 
 #### API Endereços - Deletar
@@ -625,7 +625,7 @@ Sistema de Controle Servidor Público
 | `unidade`       | `Unidade` | **Obrigatório**. |
 | `endereco`    | `Endereco` | **Obrigatório**. |
 
-[![Alt-Text](/imagens/img_unidadeendereco_post.jpg)](https://github.com/gmontinny/projeto_seplag/blob/main/imagens/img_unidadeendereco_post.jpg)
+[![Alt-Text](/imagens/img_unidadeendereco_post.jpg)](https://github.com/gmontinny/projeto_seplag/tree/main/imagens/img_unidadeendereco_post.jpg)
 
 
 #### API Unidade Endereço - Atualizar
