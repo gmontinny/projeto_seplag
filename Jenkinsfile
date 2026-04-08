@@ -94,17 +94,18 @@ pipeline {
                         def projectKey = env.JOB_NAME.replaceAll('/', ':')
                         switch (DETECTED_LANG) {
                             case 'java-maven':
-                                sh "mvn sonar:sonar -Dsonar.projectKey=${projectKey}"
+                                sh "mvn sonar:sonar -Dsonar.projectKey=${projectKey} -Dsonar.token=${env.SONAR_AUTH_TOKEN}"
                                 break
                             case 'java-gradle':
-                                sh "./gradlew sonar -Dsonar.projectKey=${projectKey}"
+                                sh "./gradlew sonar -Dsonar.projectKey=${projectKey} -Dsonar.token=${env.SONAR_AUTH_TOKEN}"
                                 break
                             default:
                                 sh """
                                     sonar-scanner \
                                       -Dsonar.projectKey=${projectKey} \
                                       -Dsonar.sources=. \
-                                      -Dsonar.host.url=http://sonarqube:9000
+                                      -Dsonar.host.url=${env.SONAR_HOST_URL} \
+                                      -Dsonar.token=${env.SONAR_AUTH_TOKEN}
                                 """
                                 break
                         }
