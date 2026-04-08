@@ -1,7 +1,7 @@
 ## PostgreSQL
 spring:
   datasource:
-    url: ${DB_URL:jdbc:postgresql://localhost:5430/syspub}
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/syspub}
     username: ${DB_USER:postgres}
     password: ${DB_PASSWORD:1203}
     hikari:

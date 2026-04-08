@@ -39,8 +39,8 @@ services:
   s3:
     image: minio/minio:latest
     ports:
-      - '9000:9000'
       - '9001:9001'
+      - '9002:9002'
     networks:
       - commons-api
     volumes:
@@ -51,7 +51,7 @@ services:
       - MINIO_DEFAULT_BUCKETS=${MINIO_DEFAULT_BUCKETS}
       - MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}
       - MINIO_SECRET_KEY=${MINIO_SECRET_KEY}
-    command: server /data --console-address ":9001"
+    command: server /data --console-address ":9002"
 
 networks:
   commons-api:
