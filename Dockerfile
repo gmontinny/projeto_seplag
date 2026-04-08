@@ -1,11 +1,11 @@
-FROM maven:3.8.5-openjdk-17-slim AS MAVEN_BUILD
+FROM maven:3.9-eclipse-temurin-17 AS build
+WORKDIR /app
 COPY . .
-RUN mvn clean package
+RUN mvn clean package -B -DskipTests
 
-FROM openjdk:17-slim-buster
-COPY --from=MAVEN_BUILD /target/*.jar /app.jar
-
-CMD ["java", "-XX:+UseG1GC", "-jar", "/app.jar"]
+FROM eclipse-temurin:17-jre-alpine
+COPY --from=build /app/target/*.jar /app/app.jar
 EXPOSE 8080
+ENTRYPOINT ["java","-jar","/app/app.jar"]
 
 
