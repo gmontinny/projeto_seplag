@@ -1,10 +1,10 @@
 // Pipeline Backend Genérico - Suporta: Java/Maven, Java/Gradle, Python, Node.js, .NET, Go
 // USO: Copie este arquivo para a raiz do seu projeto como "Jenkinsfile"
-// Configure a variável PROJECT_LANG conforme sua linguagem
 
 def REGISTRY = env.REGISTRY_URL ?: 'registry:5000'
 def IMAGE_NAME = "${REGISTRY}/${env.JOB_NAME.replaceAll('/', '-').toLowerCase()}"
 def IMAGE_TAG = "${env.BUILD_NUMBER}-${env.GIT_COMMIT?.take(7) ?: 'latest'}"
+def DETECTED_LANG = ''
 
 pipeline {
     agent any
@@ -21,7 +21,6 @@ pipeline {
 
     environment {
         SONAR_SCANNER_OPTS = '-Xmx512m'
-        LANG = ''
     }
 
     stages {
@@ -29,17 +28,17 @@ pipeline {
             steps {
                 script {
                     if (params.PROJECT_LANG == 'auto') {
-                        if (fileExists('pom.xml'))              { env.LANG = 'java-maven' }
-                        else if (fileExists('build.gradle'))    { env.LANG = 'java-gradle' }
-                        else if (fileExists('requirements.txt') || fileExists('pyproject.toml')) { env.LANG = 'python' }
-                        else if (fileExists('package.json'))    { env.LANG = 'node' }
-                        else if (fileExists('go.mod'))          { env.LANG = 'go' }
-                        else if (findFiles(glob: '*.csproj').length > 0 || findFiles(glob: '*.sln').length > 0) { env.LANG = 'dotnet' }
+                        if (fileExists('pom.xml'))              { DETECTED_LANG = 'java-maven' }
+                        else if (fileExists('build.gradle'))    { DETECTED_LANG = 'java-gradle' }
+                        else if (fileExists('requirements.txt') || fileExists('pyproject.toml')) { DETECTED_LANG = 'python' }
+                        else if (fileExists('package.json'))    { DETECTED_LANG = 'node' }
+                        else if (fileExists('go.mod'))          { DETECTED_LANG = 'go' }
+                        else if (findFiles(glob: '*.csproj').length > 0 || findFiles(glob: '*.sln').length > 0) { DETECTED_LANG = 'dotnet' }
                         else { error "Não foi possível detectar a linguagem. Defina PROJECT_LANG manualmente." }
                     } else {
-                        env.LANG = params.PROJECT_LANG
+                        DETECTED_LANG = params.PROJECT_LANG
                     }
-                    echo "Linguagem detectada: ${env.LANG}"
+                    echo "Linguagem detectada: ${DETECTED_LANG}"
                 }
             }
         }
@@ -47,7 +46,7 @@ pipeline {
         stage('Build & Test') {
             steps {
                 script {
-                    switch (env.LANG) {
+                    switch (DETECTED_LANG) {
                         case 'java-maven':
                             sh 'mvn clean verify -B'
                             break
@@ -93,7 +92,7 @@ pipeline {
                 withSonarQubeEnv('SonarQube') {
                     script {
                         def projectKey = env.JOB_NAME.replaceAll('/', ':')
-                        switch (env.LANG) {
+                        switch (DETECTED_LANG) {
                             case 'java-maven':
                                 sh "mvn sonar:sonar -Dsonar.projectKey=${projectKey}"
                                 break
@@ -128,7 +127,7 @@ pipeline {
                 script {
                     if (!fileExists('Dockerfile')) {
                         echo "WARN: Dockerfile não encontrado, gerando automaticamente..."
-                        generateDockerfile(env.LANG)
+                        generateDockerfile(DETECTED_LANG)
                     }
                     sh """
                         docker build -t ${IMAGE_NAME}:${IMAGE_TAG} -t ${IMAGE_NAME}:latest .
