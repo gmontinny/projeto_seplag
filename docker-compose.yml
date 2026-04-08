@@ -9,9 +9,12 @@ services:
     - "${APP_PORT}:${APP_PORT}"
     networks:
       - commons-api
+    restart: on-failure
     depends_on:
-      - postgres-compose
-      - s3
+      postgres-compose:
+        condition: service_healthy
+      s3:
+        condition: service_started
     container_name: api
     environment:
       - DB_URL=${DB_URL}
@@ -36,6 +39,11 @@ services:
     networks:
       - commons-api
     container_name: postgres-compose
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
 
   s3:
     image: minio/minio:latest
