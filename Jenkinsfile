@@ -123,7 +123,12 @@ pipeline {
         }
 
         stage('Docker Build & Push') {
-            when { anyOf { branch 'main'; branch 'master'; branch 'develop' } }
+            when {
+                expression {
+                    def branch = env.GIT_BRANCH ?: env.BRANCH_NAME ?: ''
+                    return branch.matches('(.*/)?main') || branch.matches('(.*/)?master') || branch.matches('(.*/)?develop')
+                }
+            }
             steps {
                 script {
                     if (!fileExists('Dockerfile')) {
@@ -140,7 +145,12 @@ pipeline {
         }
 
         stage('Deploy via Portainer') {
-            when { anyOf { branch 'main'; branch 'master' } }
+            when {
+                expression {
+                    def branch = env.GIT_BRANCH ?: env.BRANCH_NAME ?: ''
+                    return branch.matches('(.*/)?main') || branch.matches('(.*/)?master')
+                }
+            }
             steps {
                 script {
                     deployToPortainer(IMAGE_NAME, IMAGE_TAG)
@@ -150,7 +160,7 @@ pipeline {
     }
 
     post {
-        always { cleanWs() }
+        cleanup { cleanWs(deleteDirs: true, patterns: [[pattern: '.git', type: 'EXCLUDE']]) }
     }
 }
 
