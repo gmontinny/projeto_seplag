@@ -6,7 +6,7 @@ services:
     image: api-springboot
     build: ./
     ports:
-    - "8080:8080"
+    - "${APP_PORT}:${APP_PORT}"
     networks:
       - commons-api
     depends_on:
@@ -23,6 +23,7 @@ services:
       - MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}
       - MINIO_SECRET_KEY=${MINIO_SECRET_KEY}
       - SECRECT_KEY=${SECRECT_KEY}
+      - APP_PORT=${APP_PORT}
 
   postgres-compose:
     image: postgres

@@ -35,7 +35,7 @@ spring:
 #spring.jpa.show-sql=true
 
 server:
-  port: 8080
+  port: ${APP_PORT:8083}
 
 # Minio
 minio:
